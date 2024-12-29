@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import {
   ChevronDown,
   ChevronUp,
@@ -7,10 +7,12 @@ import {
   Trophy,
 } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { cn } from "@/components/lib/utils";
-import { useSidebar } from "@/components/ui/sidebar";
+import { useState, useEffect, useRef } from "react";
+
 import Loading from "@/components/Loading";
+import { useSidebar } from "@/components/ui/sidebar";
 import { useCourseProgressData } from "@/hooks/useCourseProgressData";
+import { cn } from "@/lib/utils";
 
 const ChaptersSidebar = () => {
   const router = useRouter();
@@ -237,7 +239,6 @@ const Chapter = ({
   sectionId,
   sectionProgress,
   chapterId,
-  courseId,
   handleChapterClick,
   updateChapterProgress,
 }: {

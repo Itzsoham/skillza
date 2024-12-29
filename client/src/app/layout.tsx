@@ -1,3 +1,4 @@
+import { ClerkProvider } from "@clerk/nextjs";
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 
@@ -23,9 +24,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${dmSans.className}`}>
-        <Providers>
-          <div className="root-layout">{children}</div>
-        </Providers>
+        <ClerkProvider>
+          <Providers>
+            <div className="root-layout">{children}</div>
+          </Providers>
+        </ClerkProvider>
       </body>
     </html>
   );
