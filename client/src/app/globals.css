@@ -36,7 +36,7 @@ input[type="color"] {
 }
 
 @layer base {
-  :root {
+  /* :root {
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
@@ -76,7 +76,7 @@ input[type="color"] {
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
-  }
+  } */
 
   .dark {
     --sidebar-background: 240 5.9% 10%;
