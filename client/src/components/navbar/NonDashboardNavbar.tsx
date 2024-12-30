@@ -3,6 +3,7 @@
 import { SignedIn, SignedOut, UserButton, useUser } from "@clerk/nextjs";
 import { dark } from "@clerk/themes";
 import { Bell, BookOpen } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -14,7 +15,7 @@ const NonDashboardNavbar = () => {
       <div className="nondashboard-navbar__container">
         <div className="nondashboard-navbar__search">
           <Link href="/" className="nondashboard-navbar__brand" scroll={false}>
-            SKILLZA
+            <Image height={160} width={100} src="/main.png" alt="Logo" />
           </Link>
           <div className="flex items-center gap-4">
             <div className="group relative">

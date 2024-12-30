@@ -1,4 +1,6 @@
 import { registerPlugin } from "filepond";
+import FilePondPluginImageExifOrientation from "filepond-plugin-image-exif-orientation";
+import FilePondPluginImagePreview from "filepond-plugin-image-preview";
 import { Edit, X, Plus } from "lucide-react";
 import React from "react";
 import { FilePond } from "react-filepond";
@@ -7,6 +9,7 @@ import {
   FieldValues,
   useFormContext,
   useFieldArray,
+  Control,
 } from "react-hook-form";
 
 import { Button } from "@/components/ui/button";
@@ -29,8 +32,6 @@ import { Switch } from "@/components/ui/switch";
 import { Textarea } from "@/components/ui/textarea";
 
 import "filepond/dist/filepond.min.css";
-import FilePondPluginImagePreview from "filepond-plugin-image-preview";
-import FilePondPluginImageExifOrientation from "filepond-plugin-image-exif-orientation";
 import "filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css";
 
 registerPlugin(FilePondPluginImageExifOrientation, FilePondPluginImagePreview);
@@ -224,7 +225,7 @@ export const CustomFormField: React.FC<FormFieldProps> = ({
 };
 interface MultiInputFieldProps {
   name: string;
-  control: any;
+  control: Control<FieldValues>;
   placeholder?: string;
   inputClassName?: string;
 }
