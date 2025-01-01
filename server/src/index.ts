@@ -15,7 +15,7 @@ import {
 /* ROUTE IMPORTS */
 import courseRoutes from "./routes/courseRoutes";
 import userClerkRoutes from "./routes/userClerkRoutes";
-// import transactionRoutes from "./routes/transactionRoutes";
+import transactionRoutes from "./routes/transactionRoutes";
 // import userCourseProgressRoutes from "./routes/userCourseProgressRoutes";
 
 /* CONFIGURATIONS */
@@ -48,7 +48,7 @@ app.get("/", (req, res) => {
 
 app.use("/courses", courseRoutes);
 app.use("/users/clerk", requireAuth(), userClerkRoutes);
-// app.use("/transactions", requireAuth(), transactionRoutes);
+app.use("/transactions", requireAuth(), transactionRoutes);
 // app.use("/users/course-progress", requireAuth(), userCourseProgressRoutes);
 
 /* SERVER */

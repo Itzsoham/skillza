@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-// import { Clerk } from "@clerk/clerk-js";
+import { Clerk } from "@clerk/clerk-js";
 import { User } from "@clerk/nextjs/server";
 import { BaseQueryApi, FetchArgs } from "@reduxjs/toolkit/query";
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";

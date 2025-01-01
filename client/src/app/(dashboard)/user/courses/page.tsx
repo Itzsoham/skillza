@@ -4,7 +4,7 @@ import { useUser } from "@clerk/nextjs";
 import { useRouter } from "next/navigation";
 import { useState, useMemo } from "react";
 
-import CourseCard from "@/components/CourseCard";
+import CourseCard from "@/components/cards/CourseCard";
 import Header from "@/components/Header";
 import Loading from "@/components/Loading";
 import Toolbar from "@/components/navbar/Toolbar";
