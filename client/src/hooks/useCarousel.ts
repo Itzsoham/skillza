@@ -7,7 +7,7 @@ interface UseCarouselProps {
 
 export const useCarousel = ({
   totalImages,
-  interval = 3000,
+  interval = 5000,
 }: UseCarouselProps) => {
   const [currentImage, setCurrentImage] = useState(0);
 
