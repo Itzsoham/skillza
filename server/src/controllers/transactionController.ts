@@ -76,7 +76,7 @@ export const createTransaction = async (
 
   try {
     // 1. get course info
-    const course = await Course.get(courseId);
+    const course  = await Course.get(courseId);
 
     // 2. create transaction record
     const newTransaction = new Transaction({
