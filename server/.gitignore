@@ -8,3 +8,9 @@
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
+
+**/node_modules/
+**/dist/
+**/.env
+/.env
+.env
