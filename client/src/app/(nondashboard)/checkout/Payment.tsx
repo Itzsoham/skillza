@@ -43,6 +43,7 @@ const PaymentPageContent = () => {
       elements,
       confirmParams: {
         return_url: `${baseUrl}/checkout?step=3&id=${courseId}`,
+        // return_url: `${process.env.NEXT_PUBLIC_STRIPE_REDIRECT_URL}?id=${courseId}`,
       },
       redirect: "if_required",
     });
@@ -56,7 +57,8 @@ const PaymentPageContent = () => {
         amount: course?.price || 0,
       };
 
-      await createTransaction(transactionData), navigateToStep(3);
+      await createTransaction(transactionData);
+      navigateToStep(3);
     }
   };
 

@@ -1,4 +1,7 @@
+import { Pencil, Trash2 } from "lucide-react";
+import Image from "next/image";
 import React from "react";
+
 import {
   Card,
   CardContent,
@@ -6,10 +9,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-
-import Image from "next/image";
 import { cn } from "@/lib/utils";
-import { Pencil, Trash2 } from "lucide-react";
+
 import { Button } from "../ui/button";
 
 const TeacherCourseCard = ({
@@ -41,7 +42,7 @@ const TeacherCourseCard = ({
             {course.category}
           </CardDescription>
 
-          <p className="text-sm mb-2">
+          <p className="mb-2 text-sm">
             Status:{" "}
             <span
               className={cn(
@@ -55,7 +56,7 @@ const TeacherCourseCard = ({
             </span>
           </p>
           {course.enrollments && (
-            <p className="ml-1 mt-1 inline-block text-secondary bg-secondary/10 text-sm font-normal">
+            <p className="ml-1 mt-1 inline-block bg-secondary/10 text-sm font-normal text-secondary">
               <span className="font-bold text-white-100">
                 {course.enrollments.length}
               </span>{" "}
@@ -64,7 +65,7 @@ const TeacherCourseCard = ({
           )}
         </div>
 
-        <div className="w-full xl:flex space-y-2 xl:space-y-0 gap-2 mt-3">
+        <div className="mt-3 w-full gap-2 space-y-2 xl:flex xl:space-y-0">
           {isOwner ? (
             <>
               <div>
@@ -72,7 +73,7 @@ const TeacherCourseCard = ({
                   className="course-card-teacher__edit-button"
                   onClick={() => onEdit(course)}
                 >
-                  <Pencil className="w-4 h-4 mr-2" />
+                  <Pencil className="mr-2 size-4" />
                   Edit
                 </Button>
               </div>
@@ -81,13 +82,13 @@ const TeacherCourseCard = ({
                   className="course-card-teacher__delete-button"
                   onClick={() => onDelete(course)}
                 >
-                  <Trash2 className="w-4 h-4 mr-2" />
+                  <Trash2 className="mr-2 size-4" />
                   Delete
                 </Button>
               </div>
             </>
           ) : (
-            <p className="text-sm text-gray-500 italic">View Only</p>
+            <p className="text-sm italic text-gray-500">View Only</p>
           )}
         </div>
       </CardContent>

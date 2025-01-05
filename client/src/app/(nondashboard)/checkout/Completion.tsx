@@ -18,7 +18,7 @@ const CompletionPage = () => {
           🎉 You have made a course purchase successfully! 🎉
         </p>
       </div>
-      <div className="completion__support">
+      <div className="">
         <p>
           Need help? Contact our{" "}
           <Button variant="link" asChild className="m-0 p-0 text-primary-700">

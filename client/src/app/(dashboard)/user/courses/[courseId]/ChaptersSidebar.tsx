@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import {
   ChevronDown,
   ChevronUp,
@@ -55,7 +54,7 @@ const ChaptersSidebar = () => {
 
   return (
     <div ref={sidebarRef} className="chapters-sidebar">
-      <div className="chapters-sidebar__header">
+      <div className="">
         <h2 className="chapters-sidebar__title">{course.title}</h2>
         <hr className="chapters-sidebar__divider" />
       </div>
@@ -215,7 +214,7 @@ const ChaptersList = ({
   ) => void;
 }) => {
   return (
-    <ul className="chapters-sidebar__chapters">
+    <ul className="">
       {section.chapters.map((chapter: any, index: number) => (
         <Chapter
           key={chapter.chapterId}

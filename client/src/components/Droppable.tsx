@@ -1,9 +1,9 @@
 "use client";
 
 import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
-import { Button } from "@/components/ui/button";
 import { Trash2, Edit, Plus, GripVertical } from "lucide-react";
-import { useAppDispatch, useAppSelector } from "@/state/redux";
+
+import { Button } from "@/components/ui/button";
 import {
   setSections,
   deleteSection,
@@ -11,6 +11,7 @@ import {
   openSectionModal,
   openChapterModal,
 } from "@/state";
+import { useAppDispatch, useAppSelector } from "@/state/redux";
 
 export default function DroppableComponent() {
   const dispatch = useAppDispatch();
@@ -151,7 +152,7 @@ const SectionHeader = ({
       <div className="droppable-section__title-wrapper">
         <div className="droppable-section__title-container">
           <div className="droppable-section__title">
-            <GripVertical className="h-6 w-6 mb-1" />
+            <GripVertical className="mb-1 size-6" />
             <h3 className="text-lg font-medium">{section.sectionTitle}</h3>
           </div>
           <div className="droppable-chapter__actions">
@@ -162,7 +163,7 @@ const SectionHeader = ({
               className="p-0"
               onClick={() => dispatch(openSectionModal({ sectionIndex }))}
             >
-              <Edit className="h-5 w-5" />
+              <Edit className="size-5" />
             </Button>
             <Button
               type="button"
@@ -171,7 +172,7 @@ const SectionHeader = ({
               className="p-0"
               onClick={() => dispatch(deleteSection(sectionIndex))}
             >
-              <Trash2 className="h-5 w-5" />
+              <Trash2 className="size-5" />
             </Button>
           </div>
         </div>
@@ -210,7 +211,7 @@ const ChapterItem = ({
       }`}
     >
       <div className="droppable-chapter__title">
-        <GripVertical className="h-4 w-4 mb-[2px]" />
+        <GripVertical className="mb-[2px] size-4" />
         <p className="text-sm">{`${chapterIndex + 1}. ${chapter.title}`}</p>
       </div>
       <div className="droppable-chapter__actions">
@@ -228,7 +229,7 @@ const ChapterItem = ({
             )
           }
         >
-          <Edit className="h-4 w-4" />
+          <Edit className="size-4" />
         </Button>
         <Button
           type="button"
@@ -244,7 +245,7 @@ const ChapterItem = ({
             )
           }
         >
-          <Trash2 className="h-4 w-4" />
+          <Trash2 className="size-4" />
         </Button>
       </div>
     </div>

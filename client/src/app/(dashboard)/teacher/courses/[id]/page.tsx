@@ -189,8 +189,8 @@ const CourseEditor = () => {
                   }
                   className="group border-none text-primary-700"
                 >
-                  <Plus className="group-hover:white-100 mr-1 size-4 text-primary-700" />
-                  <span className="group-hover:white-100 text-primary-700">
+                  <Plus className="mr-1 size-4 text-primary-700 group-hover:text-white-100" />
+                  <span className="text-primary-700 group-hover:text-white-100">
                     Add Section
                   </span>
                 </Button>
