@@ -3,7 +3,7 @@ import React from "react";
 import Footer from "@/components/Footer";
 import NonDashboardNavbar from "@/components/navbar/NonDashboardNavbar";
 
-import Landing from "./(nondashboard)/landing/page";
+import Landing from "./(nondashboard)/landing/main";
 
 const Home = () => {
   return (
